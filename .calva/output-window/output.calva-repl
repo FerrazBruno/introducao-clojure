@@ -18,20 +18,35 @@
 clj꞉introducao-clojure.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/resumo
+#'introducao-clojure.core/valor-grande
 clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/transacoes
+({:valor 2700.0, :tipo "receita", :comentario "bico", :data "01/12/2016"})
 clj꞉introducao-clojure.core꞉> 
-({:tipo "despesa", :valor 33.0, :data "19/11/2016"}
- {:tipo "receita", :valor 2700.0, :data "01/12/2016"}
- {:tipo "despesa", :valor 29.0, :data "03/12/2016"})
+#'introducao-clojure.core/impares
 clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/despesa?
+#'introducao-clojure.core/ano-do-pentacampeonato-do-brasil
 clj꞉introducao-clojure.core꞉> 
-({:valor 33.0, :tipo "despesa", :comentario "almoco", :data "19/11/2016"}
- {:valor 29.0, :tipo "despesa", :comentario "livro de clojure", :data "03/12/2016"})
+#'introducao-clojure.core/pi
 clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/so-valor
+#'introducao-clojure.core/um-terco
+clj꞉introducao-clojure.core꞉> 
+"Ola, mundo novo!"
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/ola
+clj꞉introducao-clojure.core꞉> 
+"Ola, mundo novo!"
+clj꞉introducao-clojure.core꞉> 
+({:valor 2700.0, :tipo "receita", :comentario "bico", :data "01/12/2016"})
+clj꞉introducao-clojure.core꞉> 
+({:valor 2700.0, :tipo "receita", :comentario "bico", :data "01/12/2016"})
+clj꞉introducao-clojure.core꞉> 
+62.0
+clj꞉introducao-clojure.core꞉> 
+62.0
+clj꞉introducao-clojure.core꞉> 
+33.0
+clj꞉introducao-clojure.core꞉> 
+33.0
 clj꞉introducao-clojure.core꞉> 
 (33.0 29.0)
 clj꞉introducao-clojure.core꞉> 

@@ -187,3 +187,41 @@
 
 ;; Funcoes anonimas
 
+(defn valor-grande [transacao]
+  (> (:valor transacao) 100))
+
+(filter valor-grande transacoes)
+
+(def impares '(1 3 5 7 9))
+(def ano-do-pentacampeonato-do-brasil 2002)
+(def pi 3.14)
+(def um-terco 1/3)
+
+((fn [nome] (str "Ola, " nome "!")) "mundo novo")
+
+(def ola (fn [nome] (str "Ola, " nome "!")))
+(ola "mundo novo")
+
+(filter (fn [transacao] (> (:valor transacao) 100)) transacoes)
+(filter #(> (:valor %) 100) transacoes)
+
+(reduce + (map #(:valor %) (filter #(= (:tipo %) "despesa") transacoes)))
+
+;; Lendo codigo clojure de uma outra forma
+
+(reduce +
+        (map so-valor
+             (filter despesa? transacoes)))
+
+(so-valor (first transacoes))
+(-> (first transacoes)
+    so-valor)
+
+(->> (filter despesa? transacoes)
+     (map so-valor)
+     (reduce +))
+
+;; Capitulo 6
+;; Composicao de funcoes e aplicacao parcial de funcoes
+
+
