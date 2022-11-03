@@ -18,37 +18,87 @@
 clj꞉introducao-clojure.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/valor-grande
+#'introducao-clojure.core/transacoes
 clj꞉introducao-clojure.core꞉> 
-({:valor 2700.0, :tipo "receita", :comentario "bico", :data "01/12/2016"})
+#'introducao-clojure.core/transacoes
 clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/impares
+#'introducao-clojure.core/valor-sinalizado
 clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/ano-do-pentacampeonato-do-brasil
+#'introducao-clojure.core/valor-sinalizado
 clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/pi
+"-33.0"
 clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/um-terco
+"+2700.0"
 clj꞉introducao-clojure.core꞉> 
-"Ola, mundo novo!"
+#'introducao-clojure.core/valor-sinalizado
 clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/ola
+"R$ -33.0"
 clj꞉introducao-clojure.core꞉> 
-"Ola, mundo novo!"
+"+2700.0"
 clj꞉introducao-clojure.core꞉> 
-({:valor 2700.0, :tipo "receita", :comentario "bico", :data "01/12/2016"})
+#'introducao-clojure.core/valor-sinalizado
 clj꞉introducao-clojure.core꞉> 
-({:valor 2700.0, :tipo "receita", :comentario "bico", :data "01/12/2016"})
+"R$ -33.0"
 clj꞉introducao-clojure.core꞉> 
-62.0
+"R$ +2700.0"
 clj꞉introducao-clojure.core꞉> 
-62.0
+#'introducao-clojure.core/valor-sinalizado
 clj꞉introducao-clojure.core꞉> 
-33.0
+"R$ -33.0"
 clj꞉introducao-clojure.core꞉> 
-33.0
+"R$ +2700.0"
 clj꞉introducao-clojure.core꞉> 
-(33.0 29.0)
+#'introducao-clojure.core/valor-sinalizado
 clj꞉introducao-clojure.core꞉> 
-62.0
+"R$ -33.0"
+clj꞉introducao-clojure.core꞉> 
+"R$ +2700.0"
+clj꞉introducao-clojure.core꞉> 
+"R$ +45.0"
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/data-valor
+clj꞉introducao-clojure.core꞉> 
+"19/11/2016 => R$ -33.0"
+clj꞉introducao-clojure.core꞉> 
+"01/12/2016 => R$ +2700.0"
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/transacao-em-yuan
+clj꞉introducao-clojure.core꞉> 
+{:valor 70.95, :tipo "despesa", :comentario "Almoco", :moeda "¥", :data "19/11/2016"}
+clj꞉introducao-clojure.core꞉> 
+"19/11/2016 => R$ -33.0"
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/cotacoes
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/transacao-em-yuan
+clj꞉introducao-clojure.core꞉> 
+{:valor 70.95, :tipo "despesa", :comentario "Almoco", :moeda "¥", :data "19/11/2016"}
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/transacao-em-yuan
+clj꞉introducao-clojure.core꞉> 
+{:valor 70.95, :tipo "despesa", :comentario "Almoco", :moeda "¥", :data "19/11/2016"}
+clj꞉introducao-clojure.core꞉> 
+; Syntax error compiling at (core.clj:270:30).
+; Unable to resolve symbol: yuan in this context
+
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/transacao-em-yuan
+clj꞉introducao-clojure.core꞉> 
+{:valor 70.95, :tipo "despesa", :comentario "Almoco", :moeda "¥", :data "19/11/2016"}
+clj꞉introducao-clojure.core꞉> 
+"19/11/2016 => R$ -33.0"
+clj꞉introducao-clojure.core꞉> 
+"19/11/2016 => R$ -33.0"
+clj꞉introducao-clojure.core꞉> 
+"01/12/2016 => ¥ +5805.0"
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/texto-resumo-em-yuan
+clj꞉introducao-clojure.core꞉> 
+"19/11/2016 => ¥ -70.95"
+clj꞉introducao-clojure.core꞉> 
+; Error printing return value (NullPointerException) at clojure.lang.Numbers/ops (Numbers.java:1068).
+; null
+
+clj꞉introducao-clojure.core꞉> 
+("19/11/2016 => ¥ -70.95" "01/12/2016 => ¥ +5805.0" "03/11/2016 => ¥ -62.349999999999994")
 clj꞉introducao-clojure.core꞉> 

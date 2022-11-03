@@ -224,4 +224,58 @@
 ;; Capitulo 6
 ;; Composicao de funcoes e aplicacao parcial de funcoes
 
+(def transacoes [{:valor 33.0 :tipo "despesa" :comentario "Almoco" :moeda "R$" :data "19/11/2016"}
+                 {:valor 2700.0 :tipo "receita" :comentario "Bico" :moeda "R$" :data "01/12/2016"}
+                 {:valor 29.0 :tipo "despesa" :comentario "Livro de Clojure" :moeda "R$" :data "03/11/2016"}])
+
+(defn valor-sinalizado [transacao]
+  (if (= (:tipo transacao) "despesa")
+    (str (:moeda transacao) " -" (:valor transacao))
+    (str (:moeda transacao) " +" (:valor transacao))))
+
+(valor-sinalizado (first transacoes))
+(valor-sinalizado (second transacoes))
+
+(defn valor-sinalizado [transacao]
+  (let [moeda (:moeda transacao "R$")
+        valor (:valor transacao)]
+    (if (= (:tipo transacao) "despesa")
+      (str moeda " -" valor)
+      (str moeda " +" valor))))
+
+(valor-sinalizado (first transacoes))
+(valor-sinalizado (second transacoes))
+(valor-sinalizado {:valor 45.0})
+
+(defn data-valor [transacao]
+  (str (:data transacao) " => " (valor-sinalizado transacao)))
+
+(data-valor (first transacoes))
+(data-valor (second transacoes))
+
+(defn transacao-em-yuan [transacao]
+  (assoc transacao :valor (* 2.15 (:valor transacao)) :moeda "¥"))
+
+(transacao-em-yuan (first transacoes))
+
+(def cotacoes {:yuan {:cotacao 2.15 :simbolo "¥"}})
+
+(defn transacao-em-yuan [transacao]
+  (assoc transacao :valor (* (-> cotacoes :yuan :cotacao) (:valor transacao)) :moeda (-> cotacoes :yuan :simbolo)))
+
+(transacao-em-yuan (first transacoes))
+
+(defn transacao-em-yuan [transacao]
+  (let [yuan (:yuan cotacoes)]
+    (assoc transacao :valor (* (:cotacao yuan) (:valor transacao)) :moeda (:simbolo yuan))))
+
+(transacao-em-yuan (first transacoes))
+
+(data-valor (first transacoes))
+(data-valor (transacao-em-yuan (second transacoes)))
+
+(defn texto-resumo-em-yuan [transacao]
+  (data-valor (transacao-em-yuan transacao)))
+
+(map texto-resumo-em-yuan transacoes)
 
