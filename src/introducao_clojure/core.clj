@@ -279,3 +279,74 @@
 
 (map texto-resumo-em-yuan transacoes)
 
+(class 3.1)
+(* 3.1 3.1)
+(class 3.1M)
+(* 3.1M 3.1)
+(* 3.1M 3.1M)
+(class (* 3.1M 3.1M))
+
+(def cotacoes {:yuan {:cotacao 2.15M :simbolo "¥"}})
+
+(def transacoes [{:valor 33.0M   :tipo "despesa" :comentario "Almoco"           :moeda "R$" :data "19/11/2016"}
+                 {:valor 2700.0M :tipo "receita" :comentario "Bico"             :moeda "R$" :data "01/12/2016"}
+                 {:valor 29.0M   :tipo "despesa" :comentario "Livro de Clojure" :moeda "R$" :data "03/12/2016"}])
+
+(map texto-resumo-em-yuan transacoes)
+
+(defn texto-resumo-em-yuan [transacao]
+  (-> (transacao-em-yuan transacao)
+      (data-valor)))
+
+;; 6.1 Composicao de funcoes
+
+(def texto-resumo-em-yuan (comp data-valor transacao-em-yuan))
+
+(map texto-resumo-em-yuan transacoes)
+
+;; 6.2 Aplicacao parcial
+;; destructuring
+(defn transacao-em-yuan [transacao]
+  (let [{yuan :yuan} cotacoes]
+    (assoc transacao :valor (* (:cotacao yuan) (:valor transacao)) :moeda (:simbolo yuan))))
+
+(transacao-em-yuan (first transacoes))
+
+(defn transacao-em-yuan [transacao]
+  (let [{{cotacao :cotacao
+          simbolo :simbolo} :yuan} cotacoes]
+    (assoc transacao :valor (* cotacao (:valor transacao)) :simbolo simbolo)))
+
+(transacao-em-yuan (first transacoes))
+
+(def cotacoes {:yuan {:cotacao 2.15M :simbolo "¥"}
+               :euro {:cotacao 0.28M :simbolo "€"}})
+
+(defn transacao-em-outra-moeda [moeda transacao]
+  (let [{{cotacao :cotacao
+          simbolo :simbolo} moeda} cotacoes]
+    (assoc transacao :valor (* cotacao (:valor transacao)) :moeda simbolo)))
+
+(transacao-em-outra-moeda :euro (first transacoes))
+(transacao-em-outra-moeda :euro (last transacoes))
+(transacao-em-outra-moeda :yuan (first transacoes))
+(transacao-em-outra-moeda :euro (last transacoes))
+
+;; partial
+(def transacao-em-euro (partial transacao-em-outra-moeda :euro))
+(def transacao-em-yuan (partial transacao-em-outra-moeda :yuan))
+
+(transacao-em-euro (first transacoes))
+(transacao-em-yuan (first transacoes))
+
+(map transacao-em-euro transacoes)
+(map transacao-em-yuan transacoes)
+
+(clojure.string/join ", " (map texto-resumo-em-yuan transacoes))
+
+(def juntar-tudo (partial clojure.string/join ", "))
+
+(juntar-tudo (map texto-resumo-em-yuan transacoes))
+
+;; Capitulo 7
+;; Pureza e imutabilidade
