@@ -18,95 +18,319 @@
 clj꞉introducao-clojure.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉introducao-clojure.core꞉> 
-java.lang.Double
+#'introducao-clojure.core/de-para
 clj꞉introducao-clojure.core꞉> 
-9.610000000000001
+#'introducao-clojure.core/escrita-hacker
 clj꞉introducao-clojure.core꞉> 
-java.math.BigDecimal
+"4l4m3d4"
 clj꞉introducao-clojure.core꞉> 
-java.lang.Double
+#'introducao-clojure.core/escrita-hacker
 clj꞉introducao-clojure.core꞉> 
-9.610000000000001
+"alameda"
+"4l4med4"
+"4l4m3d4"
+"4l4m3d4"
+"4l4m3d4"
 clj꞉introducao-clojure.core꞉> 
-9.610000000000001
+"4l4med4"
 clj꞉introducao-clojure.core꞉> 
-9.61M
+#'introducao-clojure.core/escrita-hacker
 clj꞉introducao-clojure.core꞉> 
-java.math.BigDecimal
+"4l4m3d4"
 clj꞉introducao-clojure.core꞉> 
-java.math.BigDecimal
-clj꞉introducao-clojure.core꞉> 
-java.lang.Double
-clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/cotacoes
-clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/transacoes
-clj꞉introducao-clojure.core꞉> 
-("19/11/2016 => ¥ -70.950" "01/12/2016 => ¥ +5805.000" "03/12/2016 => ¥ -62.350")
-clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/texto-resumo-em-yuan
-clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/texto-resumo-em-yuan
-clj꞉introducao-clojure.core꞉> 
-; Syntax error compiling at (core.clj:305:1).
-; Unable to resolve symbol: MAP in this context
-clj꞉introducao-clojure.core꞉> 
-("19/11/2016 => ¥ -70.950" "01/12/2016 => ¥ +5805.000" "03/12/2016 => ¥ -62.350")
-clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/transacao-em-yuan
-clj꞉introducao-clojure.core꞉> 
-{:valor 70.950M, :tipo "despesa", :comentario "Almoco", :moeda "¥", :data "19/11/2016"}
-clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/transacao-em-yuan
-clj꞉introducao-clojure.core꞉> 
-; Execution error (NullPointerException) at introducao-clojure.core/transacao-em-yuan (form-init17498641401317042034.clj:318).
-; null
-clj꞉introducao-clojure.core꞉> 
-{:valor 70.950M, :tipo "despesa", :comentario "Almoco", :moeda "R$", :data "19/11/2016", :simbolo "¥"}
+"4l4med4"
 clj꞉introducao-clojure.core꞉> 
 #'introducao-clojure.core/cotacoes
+clj꞉introducao-clojure.core꞉> 
+; Execution error (ArityException) at introducao-clojure.core/eval8050 (form-init17047626112779299630.clj:378).
+; Wrong number of args (3) passed to: introducao-clojure.core/transacao-em-outra-moeda
 clj꞉introducao-clojure.core꞉> 
 #'introducao-clojure.core/transacao-em-outra-moeda
 clj꞉introducao-clojure.core꞉> 
 {:valor 9.240M, :tipo "despesa", :comentario "Almoco", :moeda "€", :data "19/11/2016"}
 clj꞉introducao-clojure.core꞉> 
-{:valor 8.120M, :tipo "despesa", :comentario "Livro de Clojure", :moeda "€", :data "03/12/2016"}
+#'introducao-clojure.core/transacao-convertida
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/transacao-em-outra-moeda
+clj꞉introducao-clojure.core꞉> 
+; Execution error (ArityException) at introducao-clojure.core/eval8060 (form-init17047626112779299630.clj:385).
+; Wrong number of args (4) passed to: introducao-clojure.core/transacao-convertida
 clj꞉introducao-clojure.core꞉> 
 {:valor 9.240M, :tipo "despesa", :comentario "Almoco", :moeda "€", :data "19/11/2016"}
 clj꞉introducao-clojure.core꞉> 
-{:valor 8.120M, :tipo "despesa", :comentario "Livro de Clojure", :moeda "€", :data "03/12/2016"}
+#'introducao-clojure.core/transacao-em-outra-moeda
 clj꞉introducao-clojure.core꞉> 
-{:valor 70.950M, :tipo "despesa", :comentario "Almoco", :moeda "¥", :data "19/11/2016"}
-clj꞉introducao-clojure.core꞉> 
-{:valor 8.120M, :tipo "despesa", :comentario "Livro de Clojure", :moeda "€", :data "03/12/2016"}
-clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/transacao-em-euro
-clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/transacao-em-yuan
+#'introducao-clojure.core/transacao-em-outra-moeda
 clj꞉introducao-clojure.core꞉> 
 {:valor 9.240M, :tipo "despesa", :comentario "Almoco", :moeda "€", :data "19/11/2016"}
 clj꞉introducao-clojure.core꞉> 
-{:valor 70.950M, :tipo "despesa", :comentario "Almoco", :moeda "¥", :data "19/11/2016"}
+#'introducao-clojure.core/membros-fundadores
 clj꞉introducao-clojure.core꞉> 
-{:valor 9.240M, :tipo "despesa", :comentario "Almoco", :moeda "€", :data "19/11/2016"}
+("Argentina" "Brasil" "Paraguai" "Uruguai")
 clj꞉introducao-clojure.core꞉> 
-({:valor 9.240M, :tipo "despesa", :comentario "Almoco", :moeda "€", :data "19/11/2016"}
- {:valor 756.000M, :tipo "receita", :comentario "Bico", :moeda "€", :data "01/12/2016"}
- {:valor 8.120M, :tipo "despesa", :comentario "Livro de Clojure", :moeda "€", :data "03/12/2016"})
+#'introducao-clojure.core/membros-plenos
 clj꞉introducao-clojure.core꞉> 
-({:valor 9.240M, :tipo "despesa", :comentario "Almoco", :moeda "€", :data "19/11/2016"}
- {:valor 756.000M, :tipo "receita", :comentario "Bico", :moeda "€", :data "01/12/2016"}
- {:valor 8.120M, :tipo "despesa", :comentario "Livro de Clojure", :moeda "€", :data "03/12/2016"})
+; Execution error (ClassCastException) at introducao-clojure.core/eval8072 (form-init17047626112779299630.clj:402).
+; class clojure.lang.Cons cannot be cast to class clojure.lang.IFn (clojure.lang.Cons and clojure.lang.IFn are in unnamed module of loader 'app')
 clj꞉introducao-clojure.core꞉> 
-({:valor 70.950M, :tipo "despesa", :comentario "Almoco", :moeda "¥", :data "19/11/2016"}
- {:valor 5805.000M, :tipo "receita", :comentario "Bico", :moeda "¥", :data "01/12/2016"}
- {:valor 62.350M, :tipo "despesa", :comentario "Livro de Clojure", :moeda "¥", :data "03/12/2016"})
+("Venezuela" "Argentina" "Brasil" "Paraguai" "Uruguai")
 clj꞉introducao-clojure.core꞉> 
-"19/11/2016 => ¥ -70.950, 01/12/2016 => ¥ +5805.000, 03/12/2016 => ¥ -62.350"
+("Venezuela" "Argentina" "Brasil" "Paraguai" "Uruguai")
 clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/juntar-tudo
+("Argentina" "Brasil" "Paraguai" "Uruguai")
 clj꞉introducao-clojure.core꞉> 
-"19/11/2016 => ¥ -70.950, 01/12/2016 => ¥ +5805.000, 03/12/2016 => ¥ -62.350"
+("Venezuela" "Argentina" "Brasil" "Paraguai" "Uruguai")
 clj꞉introducao-clojure.core꞉> 
-"19/11/2016 => ¥ -70.950, 01/12/2016 => ¥ +5805.000, 03/12/2016 => ¥ -62.350"
+true
+clj꞉introducao-clojure.core꞉> 
+[{:valor 33.0M, :tipo "despesa", :comentario "Almoco", :moeda "R$", :data "19/11/2016"}
+ {:valor 2700.0M, :tipo "receita", :comentario "Bico", :moeda "R$", :data "01/12/2016"}
+ {:valor 29.0M, :tipo "despesa", :comentario "Livro de Clojure", :moeda "R$", :data "03/12/2016"}]
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/registros
+clj꞉introducao-clojure.core꞉> 
+#<Atom@5b297c34: ()>
+clj꞉introducao-clojure.core꞉> 
+()
+clj꞉introducao-clojure.core꞉> 
+#<Atom@5b297c34: ()>
+clj꞉introducao-clojure.core꞉> 
+({:valor 29M, :tipo "despesa", :comentario "Livro de Clojure", :moeda "R$", :data "03/12/2016"})
+clj꞉introducao-clojure.core꞉> 
+({:valor 29M, :tipo "despesa", :comentario "Livro de Clojure", :moeda "R$", :data "03/12/2016"})
+clj꞉introducao-clojure.core꞉> 
+({:valor 2700M, :tipo "receita", :comentario "Bico", :moeda "R$", :data "01/12/2016"}
+ {:valor 29M, :tipo "despesa", :comentario "Livro de Clojure", :moeda "R$", :data "03/12/2016"})
+clj꞉introducao-clojure.core꞉> 
+({:valor 2700M, :tipo "receita", :comentario "Bico", :moeda "R$", :data "01/12/2016"}
+ {:valor 29M, :tipo "despesa", :comentario "Livro de Clojure", :moeda "R$", :data "03/12/2016"})
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/registrar
+clj꞉introducao-clojure.core꞉> 
+({:valor 33M, :tipo "despesa", :comentario "Almoco", :moeda "R$", :data "19/11/2016"}
+ {:valor 2700M, :tipo "receita", :comentario "Bico", :moeda "R$", :data "01/12/2016"}
+ {:valor 29M, :tipo "despesa", :comentario "Livro de Clojure", :moeda "R$", :data "03/12/2016"})
+clj꞉introducao-clojure.core꞉> 
+({:valor 33M, :tipo "despesa", :comentario "Almoco", :moeda "R$", :data "19/11/2016"}
+ {:valor 2700M, :tipo "receita", :comentario "Bico", :moeda "R$", :data "01/12/2016"}
+ {:valor 29M, :tipo "despesa", :comentario "Livro de Clojure", :moeda "R$", :data "03/12/2016"})
+clj꞉introducao-clojure.core꞉> 
+({:valor 45M, :tipo "despesa", :comentario "Jogo no Steam", :moeda "R$", :data "26/12/2016"}
+ {:valor 33M, :tipo "despesa", :comentario "Almoco", :moeda "R$", :data "19/11/2016"}
+ {:valor 2700M, :tipo "receita", :comentario "Bico", :moeda "R$", :data "01/12/2016"}
+ {:valor 29M, :tipo "despesa", :comentario "Livro de Clojure", :moeda "R$", :data "03/12/2016"})
+clj꞉introducao-clojure.core꞉> 
+({:valor 45M, :tipo "despesa", :comentario "Jogo no Steam", :moeda "R$", :data "26/12/2016"}
+ {:valor 33M, :tipo "despesa", :comentario "Almoco", :moeda "R$", :data "19/11/2016"}
+ {:valor 2700M, :tipo "receita", :comentario "Bico", :moeda "R$", :data "01/12/2016"}
+ {:valor 29M, :tipo "despesa", :comentario "Livro de Clojure", :moeda "R$", :data "03/12/2016"})
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/transacoes
+clj꞉introducao-clojure.core꞉> 
+({:valor 45M, :tipo "despesa", :comentario "Jogo no Steam", :moeda "R$", :data "26/12/2016"}
+ {:valor 33M, :tipo "despesa", :comentario "Almoco", :moeda "R$", :data "19/11/2016"}
+ {:valor 2700M, :tipo "receita", :comentario "Bico", :moeda "R$", :data "01/12/2016"}
+ {:valor 29M, :tipo "despesa", :comentario "Livro de Clojure", :moeda "R$", :data "03/12/2016"})
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/despesa?
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/saldo-acumulado
+clj꞉introducao-clojure.core꞉> 
+2593M
+clj꞉introducao-clojure.core꞉> 
+0
+clj꞉introducao-clojure.core꞉> 
+-78M
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/calcular
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/calcular
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/saldo-acumulado
+clj꞉introducao-clojure.core꞉> 
+; Execution error (NullPointerException) at introducao-clojure.core/calcular (form-init17047626112779299630.clj:454).
+; null
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/saldo-acumulado
+clj꞉introducao-clojure.core꞉> 
+2593M
+clj꞉introducao-clojure.core꞉> 
+0
+clj꞉introducao-clojure.core꞉> 
+-78M
+clj꞉introducao-clojure.core꞉> 
+2593M
+clj꞉introducao-clojure.core꞉> 
+0
+clj꞉introducao-clojure.core꞉> 
+-78M
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/valor-sinalizado
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/saldo-acumulado
+clj꞉introducao-clojure.core꞉> 
+"Comecou saldo-acumulado. Saldo ate agora: " 0
+"Valor da transacao atual: " "R$ -45"
+"Qauntidades de transacoes restantes: " 3
+
+"Comecou saldo-acumulado. Saldo ate agora: " -45M
+"Valor da transacao atual: " "R$ -33"
+"Qauntidades de transacoes restantes: " 2
+
+"Comecou saldo-acumulado. Saldo ate agora: " -78M
+"Valor da transacao atual: " "R$ +2700"
+"Qauntidades de transacoes restantes: " 1
+
+"Comecou saldo-acumulado. Saldo ate agora: " 2622M
+"Valor da transacao atual: " "R$ -29"
+"Qauntidades de transacoes restantes: " 0
+
+"Comecou saldo-acumulado. Saldo ate agora: " 2593M
+"Processao encerrado. Saldo final: " 2593M
+nil
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/saldo-acumulado
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/saldo
+clj꞉introducao-clojure.core꞉> 
+2593M
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/saldo
+clj꞉introducao-clojure.core꞉> 
+2593M
+clj꞉introducao-clojure.core꞉> 
+2593M
+clj꞉introducao-clojure.core꞉> 
+2593M
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/como-transacao
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/poucas-transacoes
+clj꞉introducao-clojure.core꞉> 
+({:valor 0} {:valor 1} {:valor 2} {:valor 3} {:valor 4} {:valor 5} {:valor 6} {:valor 7} {:valor 8} {:valor 9})
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/muitas-transacoes
+clj꞉introducao-clojure.core꞉> 
+({:valor 0}
+ {:valor 1}
+ {:valor 2}
+ {:valor 3}
+ {:valor 4}
+ {:valor 5}
+ {:valor 6}
+ {:valor 7}
+ {:valor 8}
+ {:valor 9}
+ {:valor 10}
+ {:valor 11}
+ {:valor 12}
+ {:valor 13}
+ {:valor 14}
+ {:valor 15}
+ {:valor 16}
+ {:valor 17}
+ {:valor 18}
+ {:valor 19}
+ {:valor 20}
+ {:valor 21}
+ {:valor 22}
+ {:valor 23}
+ {:valor 24}
+ {:valor 25}
+ {:valor 26}
+ {:valor 27}
+ {:valor 28}
+ {:valor 29}
+ {:valor 30}
+ {:valor 31}
+ {:valor 32}
+ {:valor 33}
+ {:valor 34}
+ {:valor 35}
+ {:valor 36}
+ {:valor 37}
+ {:valor 38}
+ {:valor 39}
+ {:valor 40}
+ {:valor 41}
+ {:valor 42}
+ {:valor 43}
+ {:valor 44}
+ {:valor 45}
+ {:valor 46}
+ {:valor 47}
+ {:valor 48}
+ {:valor 49}
+ ...)
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/incontaveis-transacoes
+clj꞉introducao-clojure.core꞉> 
+({:valor 0}
+ {:valor 1}
+ {:valor 2}
+ {:valor 3}
+ {:valor 4}
+ {:valor 5}
+ {:valor 6}
+ {:valor 7}
+ {:valor 8}
+ {:valor 9}
+ {:valor 10}
+ {:valor 11}
+ {:valor 12}
+ {:valor 13}
+ {:valor 14}
+ {:valor 15}
+ {:valor 16}
+ {:valor 17}
+ {:valor 18}
+ {:valor 19}
+ {:valor 20}
+ {:valor 21}
+ {:valor 22}
+ {:valor 23}
+ {:valor 24}
+ {:valor 25}
+ {:valor 26}
+ {:valor 27}
+ {:valor 28}
+ {:valor 29}
+ {:valor 30}
+ {:valor 31}
+ {:valor 32}
+ {:valor 33}
+ {:valor 34}
+ {:valor 35}
+ {:valor 36}
+ {:valor 37}
+ {:valor 38}
+ {:valor 39}
+ {:valor 40}
+ {:valor 41}
+ {:valor 42}
+ {:valor 43}
+ {:valor 44}
+ {:valor 45}
+ {:valor 46}
+ {:valor 47}
+ {:valor 48}
+ {:valor 49}
+ ...)
+clj꞉introducao-clojure.core꞉> 
+45
+clj꞉introducao-clojure.core꞉> 
+499500
+clj꞉introducao-clojure.core꞉> 
+499500
+clj꞉introducao-clojure.core꞉> 
+; Execution error (StackOverflowError) at introducao-clojure.core/despesa? (form-init17047626112779299630.clj:436).
+; null
+clj꞉introducao-clojure.core꞉> 
+#'introducao-clojure.core/saldo
+clj꞉introducao-clojure.core꞉> 
+499500
+clj꞉introducao-clojure.core꞉> 
+499999500000
+clj꞉introducao-clojure.core꞉> 
+2593M
 clj꞉introducao-clojure.core꞉> 
