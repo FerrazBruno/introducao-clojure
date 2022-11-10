@@ -535,3 +535,54 @@ transacoes
 
 ;; Capitulo 8
 ;; Preguica
+
+(defn teste-da-preguica []
+  (prn "Nao deveria aparecer nada aqui")
+  "nada")
+
+(defn um-oi [a b]
+  "oi")
+
+(um-oi (teste-da-preguica) (teste-da-preguica))
+
+(filter despesa? transacoes)
+(class (filter despesa? transacoes))
+
+(def despesas (filter despesa? transacoes))
+despesas
+
+(defn valor-sinalizado [transacao]
+  (prn "Pegando o valor e a moeda da transacao: " transacao)
+  (let [moeda (:moeda transacao "R$")
+        valor (:valor transacao)]
+    (if (= (:tipo transacao) "despesa")
+      (str moeda " -" valor)
+      (str moeda " +" valor))))
+
+(def transacao-aleatoria {:valor 9.0})
+(valor-sinalizado transacao-aleatoria)
+
+(def valores (map valor-sinalizado transacoes))
+valores
+
+;; 8.1 Sequencias preguicosas e llistas infinitas de transacoes
+
+(rand-nth ["despesa" "receita"])
+(* (rand-int 100001) 0.01M)
+
+(defn transacao-aleatoria []
+  {:valor (* (rand-int 100001) 0.01M)
+   :tipo  (rand-nth ["despesa" "receita"])})
+
+(transacao-aleatoria)
+
+(repeatedly 3 transacao-aleatoria)
+(class (repeatedly 3 transacao-aleatoria))
+
+(def transacoes-aleatorias (repeatedly transacao-aleatoria))
+
+(take 1 transacoes-aleatorias)
+(take 2 transacoes-aleatorias)
+(take 5 transacoes-aleatorias)
+
+;; 8.2 A macro lazy-seq
