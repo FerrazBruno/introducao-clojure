@@ -18,137 +18,198 @@
 clj꞉introducao-clojure.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/teste-da-preguica
-clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/um-oi
-clj꞉introducao-clojure.core꞉> 
-"Nao deveria aparecer nada aqui"
-"Nao deveria aparecer nada aqui"
-"oi"
-clj꞉introducao-clojure.core꞉> 
-"2"
-"1"
-"oi"
-clj꞉introducao-clojure.core꞉> 
-"2"
-"1"
-"3"
-; Execution error (ArityException) at introducao-clojure.core/eval8127 (form-init6377106189692387171.clj:546).
-; Wrong number of args (3) passed to: introducao-clojure.core/um-oi
-clj꞉introducao-clojure.core꞉> 
-"1"
-"2"
-"oi"
-clj꞉introducao-clojure.core꞉> 
-"Nao deveria aparecer nada aqui"
-"Nao deveria aparecer nada aqui"
-"oi"
+#function[introducao-clojure.core/transacao-aleatoria]
 clj꞉introducao-clojure.core꞉> 
 ({:valor 45M, :tipo "despesa", :comentario "Jogo no Steam", :moeda "R$", :data "26/12/2016"}
  {:valor 33M, :tipo "despesa", :comentario "Almoco", :moeda "R$", :data "19/11/2016"}
+ {:valor 2700M, :tipo "receita", :comentario "Bico", :moeda "R$", :data "01/12/2016"}
  {:valor 29M, :tipo "despesa", :comentario "Livro de Clojure", :moeda "R$", :data "03/12/2016"})
 clj꞉introducao-clojure.core꞉> 
-clojure.lang.LazySeq
+{:valor 317.84M, :tipo "despesa"}
 clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/despesas
-clj꞉introducao-clojure.core꞉> 
-({:valor 45M, :tipo "despesa", :comentario "Jogo no Steam", :moeda "R$", :data "26/12/2016"}
+({:valor 122.89M, :tipo "despesa"}
+ {:valor 45M, :tipo "despesa", :comentario "Jogo no Steam", :moeda "R$", :data "26/12/2016"}
  {:valor 33M, :tipo "despesa", :comentario "Almoco", :moeda "R$", :data "19/11/2016"}
+ {:valor 2700M, :tipo "receita", :comentario "Bico", :moeda "R$", :data "01/12/2016"}
  {:valor 29M, :tipo "despesa", :comentario "Livro de Clojure", :moeda "R$", :data "03/12/2016"})
 clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/transacao-aleatoria
+; Execution error (ClassCastException) at introducao-clojure.core/eval8153 (form-init5145457345034443792.clj:590).
+; class clojure.lang.PersistentArrayMap cannot be cast to class java.util.Map$Entry (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.util.Map$Entry is in module java.base of loader 'bootstrap')
 clj꞉introducao-clojure.core꞉> 
-" +9.0"
+({:valor 941.56M, :tipo "despesa"}
+ {:valor 45M, :tipo "despesa", :comentario "Jogo no Steam", :moeda "R$", :data "26/12/2016"}
+ {:valor 33M, :tipo "despesa", :comentario "Almoco", :moeda "R$", :data "19/11/2016"}
+ {:valor 2700M, :tipo "receita", :comentario "Bico", :moeda "R$", :data "01/12/2016"}
+ {:valor 29M, :tipo "despesa", :comentario "Livro de Clojure", :moeda "R$", :data "03/12/2016"})
 clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/valor-sinalizado
+#'introducao-clojure.core/aleatorias
 clj꞉introducao-clojure.core꞉> 
-"Pegando o valor e a moeda da transacao: " {:valor 9.0}
-"R$+9.0"
+; Execution error (ClassCastException) at introducao-clojure.core/aleatorias (form-init5145457345034443792.clj:593).
+; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
 clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/valor-sinalizado
+#'introducao-clojure.core/aleatorias
 clj꞉introducao-clojure.core꞉> 
-"Pegando o valor e a moeda da transacao: " {:valor 9.0}
-"R$ +9.0"
+({:valor 237.55M, :tipo "despesa"}
+ {:valor 195.42M, :tipo "receita"}
+ {:valor 289.33M, :tipo "despesa"}
+ {:valor 135.56M, :tipo "receita"})
 clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/valores
+#'introducao-clojure.core/aleatorias
 clj꞉introducao-clojure.core꞉> 
-"Pegando o valor e a moeda da transacao: " {:valor 45M, :tipo "despesa", :comentario "Jogo no Steam", :moeda "R$", :data "26/12/2016"}
-("R$ -45""Pegando o valor e a moeda da transacao: " {:valor 33M, :tipo "despesa", :comentario "Almoco", :moeda "R$", :data "19/11/2016"}
-
- "R$ -33""Pegando o valor e a moeda da transacao: " {:valor 2700M, :tipo "receita", :comentario "Bico", :moeda "R$", :data "01/12/2016"}
-
- "R$ +2700""Pegando o valor e a moeda da transacao: " {:valor 29M, :tipo "despesa", :comentario "Livro de Clojure", :moeda "R$", :data "03/12/2016"}
-
- "R$ -29")
+({:valor 536.36M, :tipo "despesa"}
+ {:valor 583.47M, :tipo "despesa"}
+ {:valor 627.43M, :tipo "receita"}
+ {:valor 370.99M, :tipo "receita"})
 clj꞉introducao-clojure.core꞉> 
-"despesa"
+({:valor 732.19M, :tipo "receita"}
+ {:valor 778.45M, :tipo "receita"}
+ {:valor 77.21M, :tipo "receita"}
+ {:valor 92.22M, :tipo "despesa"}
+ {:valor 704.85M, :tipo "despesa"}
+ {:valor 191.02M, :tipo "despesa"}
+ {:valor 9.97M, :tipo "receita"}
+ {:valor 601.91M, :tipo "despesa"}
+ {:valor 831.09M, :tipo "despesa"}
+ {:valor 547.91M, :tipo "despesa"}
+ {:valor 824.48M, :tipo "despesa"}
+ {:valor 570.74M, :tipo "receita"}
+ {:valor 526.71M, :tipo "despesa"}
+ {:valor 598.45M, :tipo "despesa"}
+ {:valor 443.07M, :tipo "receita"}
+ {:valor 378.11M, :tipo "despesa"}
+ {:valor 594.33M, :tipo "despesa"}
+ {:valor 272.76M, :tipo "receita"}
+ {:valor 267.64M, :tipo "despesa"}
+ {:valor 219.84M, :tipo "receita"}
+ {:valor 249.53M, :tipo "receita"}
+ {:valor 164.54M, :tipo "despesa"}
+ {:valor 570.14M, :tipo "despesa"}
+ {:valor 517.35M, :tipo "receita"}
+ {:valor 757.37M, :tipo "despesa"}
+ {:valor 138.88M, :tipo "despesa"}
+ {:valor 788.21M, :tipo "receita"}
+ {:valor 27.88M, :tipo "receita"}
+ {:valor 331.66M, :tipo "despesa"}
+ {:valor 280.10M, :tipo "despesa"}
+ {:valor 503.68M, :tipo "receita"}
+ {:valor 995.99M, :tipo "receita"}
+ {:valor 199.37M, :tipo "despesa"}
+ {:valor 644.19M, :tipo "receita"}
+ {:valor 130.95M, :tipo "receita"}
+ {:valor 935.81M, :tipo "receita"}
+ {:valor 982.44M, :tipo "receita"}
+ {:valor 530.93M, :tipo "despesa"}
+ {:valor 592.84M, :tipo "despesa"}
+ {:valor 884.19M, :tipo "receita"}
+ {:valor 799.40M, :tipo "receita"}
+ {:valor 240.45M, :tipo "despesa"}
+ {:valor 511.04M, :tipo "receita"}
+ {:valor 214.35M, :tipo "despesa"}
+ {:valor 739.11M, :tipo "despesa"}
+ {:valor 529.05M, :tipo "despesa"}
+ {:valor 688.76M, :tipo "receita"}
+ {:valor 350.07M, :tipo "despesa"}
+ {:valor 608.99M, :tipo "receita"}
+ {:valor 229.07M, :tipo "receita"}
+ ...)
 clj꞉introducao-clojure.core꞉> 
-"despesa"
+#'introducao-clojure.core/aleatorias
 clj꞉introducao-clojure.core꞉> 
-"receita"
+; Execution error (StackOverflowError) at introducao-clojure.core/transacao-aleatoria (core.clj:574).
+; null
 clj꞉introducao-clojure.core꞉> 
-"receita"
+#'introducao-clojure.core/aleatorias
 clj꞉introducao-clojure.core꞉> 
-"despesa"
+({:valor 904.28M, :tipo "despesa"}
+ {:valor 967.22M, :tipo "receita"}
+ {:valor 511.57M, :tipo "despesa"}
+ {:valor 239.15M, :tipo "despesa"})
 clj꞉introducao-clojure.core꞉> 
-"receita"
+clojure.lang.Cons
 clj꞉introducao-clojure.core꞉> 
-"despesa"
+clojure.lang.Cons
 clj꞉introducao-clojure.core꞉> 
-37.88M
+"Elapsed time: 0.411351 msecs"
+clojure.lang.Cons
 clj꞉introducao-clojure.core꞉> 
-139.16M
+"Elapsed time: 578.371409 msecs"
+clojure.lang.Cons
 clj꞉introducao-clojure.core꞉> 
-426.87M
+; Syntax error (IllegalArgumentException) compiling recur at (core.clj:625:7).
+; Mismatched argument count to recur, expected: 0 args, got: 3
 clj꞉introducao-clojure.core꞉> 
-89.55M
+#'introducao-clojure.core/aleatorias
 clj꞉introducao-clojure.core꞉> 
-702.41M
-clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/transacao-aleatoria
-clj꞉introducao-clojure.core꞉> 
-{:valor 332.90M, :tipo "receita"}
-clj꞉introducao-clojure.core꞉> 
-{:valor 904.91M, :tipo "despesa"}
-clj꞉introducao-clojure.core꞉> 
-{:valor 351.80M, :tipo "despesa"}
-clj꞉introducao-clojure.core꞉> 
-{:valor 174.03M, :tipo "receita"}
-clj꞉introducao-clojure.core꞉> 
-{:valor 20.17M, :tipo "receita"}
-clj꞉introducao-clojure.core꞉> 
-{:valor 14.92M, :tipo "receita"}
-clj꞉introducao-clojure.core꞉> 
-{:valor 304.33M, :tipo "despesa"}
-clj꞉introducao-clojure.core꞉> 
-{:valor 766.74M, :tipo "despesa"}
-clj꞉introducao-clojure.core꞉> 
-({:valor 453.10M, :tipo "receita"} {:valor 345.13M, :tipo "despesa"} {:valor 445.22M, :tipo "despesa"})
-clj꞉introducao-clojure.core꞉> 
+"Elapsed time: 0.481031 msecs"
 clojure.lang.LazySeq
 clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/transacoes-aleatorias
+"Elapsed time: 0.161079 msecs"
+clojure.lang.LazySeq
 clj꞉introducao-clojure.core꞉> 
-; Syntax error compiling at (core.clj:584:1).
-; Unable to resolve symbol: transacao-aleatorias in this context
+#'introducao-clojure.core/aleatorias
 clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/transacoes-aleatorias
+#'introducao-clojure.core/aleatorias
 clj꞉introducao-clojure.core꞉> 
-; Syntax error compiling at (core.clj:584:1).
-; Unable to resolve symbol: transacao-aleatorias in this context
+"Elapsed time: 0.534913 msecs"
+clojure.lang.LazySeq
 clj꞉introducao-clojure.core꞉> 
-#'introducao-clojure.core/transacoes-aleatorias
+"Elapsed time: 0.163049 msecs"
+clojure.lang.LazySeq
 clj꞉introducao-clojure.core꞉> 
-; Syntax error compiling at (core.clj:584:1).
-; Unable to resolve symbol: transacao-aleatorias in this context
+({:valor 348.27M, :tipo "receita"}
+ {:valor 452.82M, :tipo "despesa"}
+ {:valor 588.93M, :tipo "receita"}
+ {:valor 485.96M, :tipo "receita"})
 clj꞉introducao-clojure.core꞉> 
-({:valor 603.78M, :tipo "receita"})
-clj꞉introducao-clojure.core꞉> 
-({:valor 603.78M, :tipo "receita"} {:valor 244.66M, :tipo "despesa"})
-clj꞉introducao-clojure.core꞉> 
-({:valor 603.78M, :tipo "receita"}
- {:valor 244.66M, :tipo "despesa"}
- {:valor 740.22M, :tipo "despesa"}
- {:valor 416.31M, :tipo "receita"}
- {:valor 414.70M, :tipo "despesa"})
+({:valor 998.57M, :tipo "despesa"}
+ {:valor 748.77M, :tipo "despesa"}
+ {:valor 988.95M, :tipo "receita"}
+ {:valor 975.75M, :tipo "despesa"}
+ {:valor 146.79M, :tipo "receita"}
+ {:valor 333.46M, :tipo "receita"}
+ {:valor 24.33M, :tipo "receita"}
+ {:valor 354.38M, :tipo "receita"}
+ {:valor 465.69M, :tipo "despesa"}
+ {:valor 237.50M, :tipo "receita"}
+ {:valor 78.79M, :tipo "despesa"}
+ {:valor 618.08M, :tipo "despesa"}
+ {:valor 205.05M, :tipo "despesa"}
+ {:valor 292.13M, :tipo "receita"}
+ {:valor 14.09M, :tipo "despesa"}
+ {:valor 796.76M, :tipo "receita"}
+ {:valor 155.98M, :tipo "receita"}
+ {:valor 193.37M, :tipo "receita"}
+ {:valor 740.56M, :tipo "despesa"}
+ {:valor 878.76M, :tipo "despesa"}
+ {:valor 281.72M, :tipo "receita"}
+ {:valor 757.15M, :tipo "despesa"}
+ {:valor 643.58M, :tipo "despesa"}
+ {:valor 647.34M, :tipo "receita"}
+ {:valor 956.50M, :tipo "receita"}
+ {:valor 369.24M, :tipo "despesa"}
+ {:valor 932.57M, :tipo "despesa"}
+ {:valor 557.66M, :tipo "receita"}
+ {:valor 3.60M, :tipo "despesa"}
+ {:valor 884.14M, :tipo "despesa"}
+ {:valor 228.70M, :tipo "receita"}
+ {:valor 33.34M, :tipo "receita"}
+ {:valor 974.49M, :tipo "receita"}
+ {:valor 476.45M, :tipo "receita"}
+ {:valor 957.96M, :tipo "despesa"}
+ {:valor 811.39M, :tipo "despesa"}
+ {:valor 359.79M, :tipo "despesa"}
+ {:valor 199.08M, :tipo "despesa"}
+ {:valor 365.75M, :tipo "despesa"}
+ {:valor 214.37M, :tipo "despesa"}
+ {:valor 674.17M, :tipo "receita"}
+ {:valor 251.78M, :tipo "despesa"}
+ {:valor 219.63M, :tipo "despesa"}
+ {:valor 478.95M, :tipo "despesa"}
+ {:valor 606.01M, :tipo "receita"}
+ {:valor 214.15M, :tipo "receita"}
+ {:valor 516.43M, :tipo "despesa"}
+ {:valor 519.39M, :tipo "despesa"}
+ {:valor 673.58M, :tipo "receita"}
+ {:valor 747.03M, :tipo "receita"}
+ ...)
 clj꞉introducao-clojure.core꞉> 

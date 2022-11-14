@@ -586,3 +586,59 @@ valores
 (take 5 transacoes-aleatorias)
 
 ;; 8.2 A macro lazy-seq
+(cons (transacao-aleatoria) transacoes)
+
+#_(defn aleatorias
+  ([quantidade]
+   (aleatorias quantidade 1 (list (transacao-aleatoria))))
+  ([quantidade contador transacoes]
+   (if (< contador quantidade)
+     (aleatorias quantidade (inc contador) (cons (transacao-aleatoria) transacoes))
+     transacoes)))
+
+#_(aleatorias 4)
+;; (aleatorias 900000) -> (StackOverflowError)
+
+#_(defn aleatorias
+  ([quantidade]
+   (aleatorias quantidade 1 (list (transacao-aleatoria))))
+  ([quantidade contador transacoes]
+   (if (= contador quantidade)
+     transacoes
+     (recur quantidade (inc contador) (cons (transacao-aleatoria) transacoes)))))
+
+#_(aleatorias 4)
+;; (aleatorias 900000) -> funciona, so comentei pra nao demorar na execucao do repl
+#_(class (aleatorias 4))
+;; (class (aleatorias 900000))
+
+#_(time (class (aleatorias 4)))
+#_(time (class (aleatorias 900000)))
+
+#_(defn aleatorias
+  ([quantidade]
+   (aleatorias quantidade 1 (list (transacao-aleatoria))))
+  ([quantidade contador transacoes]
+   (lazy-seq
+    (if (= contador quantidade)
+      transacoes
+      (aleatorias quantidade (inc contador) (cons (transacao-aleatoria) transacoes))))))
+
+#_(time (class (aleatorias 4)))
+#_(time (class (aleatorias 900000)))
+
+(defn aleatorias []
+  (lazy-seq
+   (cons (transacao-aleatoria) (aleatorias))))
+
+(time (class (aleatorias)))
+(time (class (take 900000 (aleatorias))))
+
+(take 4 (aleatorias))
+;; (take 900000 (aleatorias))
+
+;; 8.3 Conclusao
+
+;; Programacao Funcional na Pratica
+;; Capitulo 9
+;; Criando uma aplicacao com leiningen
